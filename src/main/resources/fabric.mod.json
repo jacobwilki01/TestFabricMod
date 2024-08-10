@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cjwilks-test-mod",
+	"version": "${version}",
+	"name": "CJWilk's Test Mod",
+	"description": "Test mod to learn things in Fabric!",
+	"authors": [
+		"CJWilk"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cjwilks-test-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.cjwilk.CJWilksTestMod"
+		],
+		"client": [
+			"com.cjwilk.CJWilksTestModClient"
+		]
+	},
+	"mixins": [
+		"cjwilks-test-mod.mixins.json",
+		{
+			"config": "cjwilks-test-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
